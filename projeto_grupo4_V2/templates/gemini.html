@@ -1,0 +1,45 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunte ao Gemini</title>
+</head>
+<body>
+    <div class="container my-4">
+        <div class="bg-white text-dark px-4 py-3 border rounded shadow-sm text-center">
+            <h1 class="h4 fw-semibold mb-0">Converse com o Gemini</h1>
+        </div>
+    </div>
+
+    <div class="container my-4">
+  <form method="POST" action="/gemini" class="bg-white text-dark p-4 border rounded shadow-sm">
+    <div class="mb-3">
+      <label for="pergunta" class="form-label fw-semibold">Sua Pergunta:</label>
+      <textarea id="pergunta" name="pergunta" rows="6" class="form-control" placeholder="Digite sua pergunta aqui..." required></textarea>
+    </div>
+    <div class="text-end">
+      <button type="submit" class="btn btn-dark">Perguntar ao Gemini</button>
+    </div>
+  </form>
+
+  {% if resposta %}
+  <div class="bg-light text-dark border rounded p-4 mt-4 shadow-sm">
+    <h5 class="bt btn-dark">Você perguntou:</h5>
+    <p class="mb-4">{{ pergunta }}</p>
+
+    <h5 class="bt btn-dark">Resposta do Gemini:</h5>
+    <p>{{ resposta }}</p>
+  </div>
+  {% endif %}
+
+
+
+<a href="/" class="btn btn-light">Página Inicial</a>
+    </div>
+</body>
+</html>
+
+{% endblock %}

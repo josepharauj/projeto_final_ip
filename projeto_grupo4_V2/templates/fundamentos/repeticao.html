@@ -1,0 +1,46 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<div class="container my-4">
+  <div class="bg-white text-black px-4 py-3 border rounded shadow-sm text-center">
+    <h1 class="h4 fw-semibold mb-0">Estruturas de Repetição</h1>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Conceito:</h3>
+    <p>Permite que um bloco de código seja repetido várias vezes, com base em uma condição ou intervalo.</p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Aplicação:</h3>
+    <p>Repetir ações como percorrer listas, somar valores ou exibir mensagens.</p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Exemplo com for:</h3>
+    <pre class="bg-light text-dark p-3 border rounded">
+            for i in range(5)
+                print("Contagem:", i)
+    </pre>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Com while:</h3>
+    <pre class="bg-light text-dark p-3 border rounded">
+        contador = 0
+        while contador < 5:
+            print("Contador:", contador)
+            contador += 1
+
+
+    </pre>
+  </div>
+
+<a href="/" class="btn btn-light">Página Inicial</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<div class="container my-4">
+  <div class="bg-white text-dark px-4 py-3 border rounded shadow-sm text-center">
+    <h1 class="h4 fw-semibold mb-0">Editar Termo Cadastrado</h1>
+  </div>
+
+<form action="{{ url_for('atualizar_termo', indice=indice) }}" method="POST">
+  <div class="mb-3">
+    <label for="termo" class="form-label">Termo</label>
+    <input type="text" class="form-control" id="termo" name="termo" value="{{ termo[0] }}" required>
+  </div>
+  <div class="mb-3">
+    <label for="definicao" class="form-label">Definição</label>
+    <textarea class="form-control" id="definicao" name="definicao" rows="3" required>{{ termo[1] }}</textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Salvar</button>
+  <a href="{{ url_for('glossario') }}" class="btn btn-danger">Cancelar Edição</a>
+</form>
+{% endblock %}
+</div>

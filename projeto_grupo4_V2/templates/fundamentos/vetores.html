@@ -1,0 +1,49 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<div class="container my-4">
+  <div class="bg-white text-black px-4 py-3 border rounded shadow-sm text-center">
+    <h1 class="h4 fw-semibold mb-0">Vetores e Matrizes</h1>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Conceito:</h3>
+      <h4 class="h5 fw-semibold border-bottom pb-1 text-ligth">Vetores (listas):</h4>
+        <p>Estruturas lineares que armazenam múltiplos valores.</p>
+      <h4 class="h5 fw-semibold border-bottom pb-1 text-ligth">Matrizes (listas de listas):</h4>
+        <p>Estruturas bidimensionais.</p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Aplicação:</h3>
+    <p>Guardar e manipular conjuntos de dados, como notas de alunos ou elementos de uma tabela.</p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Exemplo de vetor:</h3>
+    <pre class="bg-light text-dark p-3 border rounded">
+        frutas = ["maçã", "banana", "laranja"]
+        print(frutas[1] # banana
+    </pre>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Exemplo de matriz:</h3>
+    <pre class="bg-light text-dark p-3 border rounded">
+        matriz = [
+            [1, 2],
+            [3,4]
+        ]
+         print(matriz[1][0]) #3
+
+    </pre>
+  </div>
+
+<a href="/" class="btn btn-light">Página Inicial</a>
+</div>
+
+{% endblock %}

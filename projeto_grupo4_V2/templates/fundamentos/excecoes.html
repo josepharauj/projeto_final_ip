@@ -1,0 +1,44 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<div class="container my-4">
+  <div class="bg-white text-black px-4 py-3 border rounded shadow-sm text-center">
+    <h1 class="h4 fw-semibold mb-0">Tratamentos de Exceção</h1>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Conceito:</h3>
+    <p>Permite lidar com erros que ocorrem durante a execução do programa, evitando falhas.</p>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Aplicação:</h3>
+    <p>Capturar erros como divisão por zero ou entrada inválida do usuário.</p>
+  </div>
+
+   <div class="mb-4">
+    <h3 class="h5 fw-semibold border-bottom pb-1 text-ligth">Exemplo:</h3>
+    <pre class="bg-light text-dark p-3 border rounded">
+        try:
+        numero = int(input("Digite um número: ))
+        resultado = 10 / numero
+        print("Resultado:, resultado)
+    except ZeroDivisionError:
+        print("Erro: Divisão por zero.")
+    except ValueError:
+        print("Erro: Entrada inválida.")
+    </pre>
+  </div>
+
+
+<a href="/" class="btn btn-light">Página Inicial</a>
+
+</div>
+
+
+{% endblock %}
